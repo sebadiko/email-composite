@@ -3,6 +3,10 @@ import { Email } from "./Email";
 export class Carpeta extends EmailManager{
     public folder: Email[] = [];
 
+    constructor(){
+        super();
+    }
+
     public Add(pEmail: Email) {
         this.folder.push(pEmail);
     }
@@ -12,9 +16,7 @@ export class Carpeta extends EmailManager{
             if(this.folder[i].getCorreo == pEmail.getCorreo){
                 this.folder.splice(i, i);
             }
-
-        }
-        
+        } 
     }
 
     public operation(): string {

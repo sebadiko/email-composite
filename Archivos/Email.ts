@@ -4,7 +4,8 @@ export class Email extends EmailManager {
     private mensaje: string;
     private asunto: string;
 
-    public escribirMail(pCorreo: string, pReceptor: string, pAsunto: string, pMensaje: string){
+    constructor(pCorreo: string, pReceptor: string, pAsunto: string, pMensaje: string){
+        super();
         this.correo = pCorreo;
         this.receptor = pReceptor;
         this.mensaje = pMensaje;
